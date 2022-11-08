@@ -1,6 +1,9 @@
-export default function Posts() {
-    return <h1>Posts</h1>
-}
+import {MainLayout} from "../layout/MainLayout";
 
-// /posts
-// /post/228
+export default function Posts() {
+    return (
+        <MainLayout title={"Posts"}>
+            <h1>Posts</h1>
+        </MainLayout>
+    )
+}
