@@ -14,12 +14,12 @@ export default function Post({post: serverPost}) {
             setPost(data)
         }
 
-        if(!serverPost) {
+        if (!serverPost) {
             load()
         }
     }, [])
 
-    if(!post) {
+    if (!post) {
         return <MainLayout>
             <h3>Loading...</h3>
         </MainLayout>
@@ -35,6 +35,7 @@ export default function Post({post: serverPost}) {
     )
 }
 
+// Frontend + Backend
 Post.getInitialProps = async (context) => {
     if(!context.req) {
         return {post: null}
@@ -46,3 +47,11 @@ Post.getInitialProps = async (context) => {
         post
     }
 }
+
+// Server Side Rendering Only
+// export async function getServerSideProps(context) {
+//     const response = await fetch(`http://localhost:9999/posts/${context.query.id}`)
+//     const post = await response.json()
+//
+//     return {props: {post}}
+// }

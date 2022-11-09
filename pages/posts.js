@@ -38,6 +38,7 @@ export default function Posts({posts: serverPosts}) {
 }
 
 Posts.getInitialProps = async ({req}) => {
+    // req - серверный объект
     if(!req) {
         return {posts: null}
     }
