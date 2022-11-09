@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "serve": "concurrently \"npm run dev\" \"npm run mock\"",
-    "mock": "json-server --watch db.json --port 9999 --delay 450"
+    "mock": "json-server --watch db.json --port 9999 --delay 1750"
   },
   "dependencies": {
     "next": "13.0.2",
