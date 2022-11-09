@@ -13,7 +13,7 @@ export default function About({description}) {
 }
 
 About.getInitialProps = async () => {
-    const response = await fetch('http://localhost:9999/about')
+    const response = await fetch(`http://localhost:9999/about`)
     const data = await response.json()
 
     return {
